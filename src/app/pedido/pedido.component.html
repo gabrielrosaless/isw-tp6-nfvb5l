@@ -1,0 +1,77 @@
+<div class="containter">
+   <div class="row">
+                <div class="form-group col-sm-12">
+                    <label for="text">Que buscar:</label>
+                    <input type="text" class="form-control" placeholder="Que desea que busquemos" id="text">
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="form-group col-sm-12">
+                            <select class="form-control" name="ciudad" id="ciudad">
+                                <option>----Ciudad----</option>
+                                <option>Córdoba</option>
+                                <option>Buenos Aires</option>
+                                <option>Mendoza</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Calle" id="dir">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nro" id="dir">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Piso" id="dir">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Torre" id="dir">
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-12">
+                            <input type="text" class="form-control" name="monto" id="monto" aria-describedby="helpId"
+                                placeholder="Monto $">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-8">
+                    <textarea class="form-control" rows="8" id="comment" placeholder="Referencias"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Mostranos una foto</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Foto del producto</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <br>
+
+          <div>
+            <div class="row justify-content-center">            
+            
+            <button type="button" class="btn btn-warning" routerLink="/mapa">
+                <span class="fas fa-undo" >Seleccionar en el Mapa</span>
+            </button>
+            &nbsp;
+            <button type="button" class="btn btn-primary" routerLink="/destino">
+                <span class="fas fa-check" ></span> Siguiente
+            </button>
+        </div>
+        </div>
+
+</div>

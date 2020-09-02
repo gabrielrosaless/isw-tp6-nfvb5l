@@ -1,0 +1,54 @@
+<div class="container">
+  <h3 class="text-center">Selecciona tu forma de pago:</h3>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary col-sm-3" (click)="efectiv()">Efectivo</button>
+                    <button type="button" class="btn btn-secondary col-sm-3"(click)="td()">Tarjeta</button>
+                </div>
+                <hr>
+                
+                <div class="efectivo" *ngIf="efectivo">
+                  <form name="FormEfectivo" [formGroup]='FormEfectivo'>
+                    <h4 class="text-center">Efectivo</h4>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="text">Con cuanto pagas:</label>
+                                <input type="number" min="0" class="form-control" placeholder="$$$$:" id="abonado" formControlName="abonado"
+                                [ngClass]="{'is-invalid': (FormEfectivo.controls.abonado.touched || submitted)  
+                                  && FormEfectivo.controls.abonado.errors}">
+                            </div>
+                        </div>
+                    </div>
+                  </form>
+                </div>
+    
+                <div class="tarjeta" *ngIf="tarjeta">
+                    <h4 class="text-center">Tarjeta</h4>
+                    <div class="form-group">
+                        <label for="text">Nombre y Apellido:</label>
+                        <input type="text" class="form-control" placeholder="Nombre y Apellido" id="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Numero de tarjeta:</label>
+                        <input type="text"  class="form-control" placeholder="xxxx-xxxx-xxxx-xxxx" id="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Fecha de vencimiento:</label>
+                        <input type="text" class="form-control"  placeholder="MM/AAAA" id="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">CRC:</label>
+                        <input type="text" class="form-control"  placeholder="xxx" id="text">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                <button type="button" class="btn btn-warning col-sm-3" routerLink="/destino">
+                    <span class="fas fa-undo">Anterior</span>
+                </button>
+                &nbsp;
+                <button type="button" class="btn btn-primary col-sm-3">Traemelo</button>
+                </div>
+
+
+</div>
