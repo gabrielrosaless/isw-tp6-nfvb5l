@@ -13,11 +13,13 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AppMenuComponent } from './app-menu/app-menu.component';
 import { PedidoComponent } from './pedido/pedido.component';
-import { MapaComponent } from './mapa/mapa.component';
+
 import { DestinoComponent } from './destino/destino.component';
 import { PagoComponent } from './app-menu/pago/pago.component';
 import { InicioComponent } from './app-menu/inicio/inicio.component';
+
 import { AgmCoreModule } from '@agm/core';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 @NgModule({
@@ -25,6 +27,9 @@ import { AgmCoreModule } from '@agm/core';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBN3hl8CILMQex6Sv2xo0rxrhetOd1Zcs'
+    }),
     RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component:  InicioComponent},
@@ -32,13 +37,7 @@ import { AgmCoreModule } from '@agm/core';
       { path: 'pago', component: PagoComponent },
       { path: 'mapa', component: MapaComponent },
       { path: 'pedido', component: PedidoComponent }
-    ]),
-    AgmCoreModule.forRoot({
-      // please get your own API key here:
-      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
-      apiKey: 'AIzaSyBN3hl8CILMQex6Sv2xo0rxrhetOd1Zcs'
-    })
-        
+    ])  
   ],
   providers:[],
   declarations: [ AppComponent, HelloComponent, AppMenuComponent, PedidoComponent, MapaComponent, DestinoComponent, PagoComponent, InicioComponent ],
