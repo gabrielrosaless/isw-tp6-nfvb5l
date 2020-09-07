@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MapsService} from './maps.service';
 
 declare function initMapa(): any;
 
@@ -10,15 +11,27 @@ declare function initMapa(): any;
 })
 
 
-export class MapaComponent implements OnInit
+export class MapaComponent 
 {
-      title = 'My first AGM project';
-      lat = 51.678418;
-      lng = 7.809007;
+     
+    lat: string = '';
+    lng: string = '';
 
-   constructor() { }
-    ngOnInit() {
+    location: Object;
+
+    constructor(private map:MapsService)
+    {
+
     }
 
+    ngOnInit()
+    {
+      this.map.getLocation().suscribre(data => 
+      {
+        console.log(data);
+        this.lat = data.latitude;
+        this.lng = data.longitude;
+      })
+    }
 }
 
