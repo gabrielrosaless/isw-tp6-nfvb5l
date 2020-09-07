@@ -5,6 +5,7 @@
   "dependencies": {
     "@agm/core": "^1.1.0",
     "@angular/animations": "10.0.9",
+    "@angular/cli": "^10.1.0",
     "@angular/common": "10.0.9",
     "@angular/compiler": "10.0.9",
     "@angular/core": "10.0.9",

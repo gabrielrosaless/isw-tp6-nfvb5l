@@ -1,17 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import * as mapa from './mapa.js';
+
+declare function initMapa(): any;
 
 @Component({
   selector: 'app-map',
   templateUrl: './mapa.component.html',
-  styleUrls: [ './mapa.component.css' ]
+  styleUrls: [ './mapa.component.css' ],
+  
 })
+
 
 export class MapaComponent implements OnInit
 {
-  ngOnInit() {
-    mapa.initMap();    
-  }
+      title = 'My first AGM project';
+      lat = 51.678418;
+      lng = 7.809007;
+
+   constructor() { }
+    ngOnInit() {
+    }
 
 }
 

@@ -22,14 +22,19 @@ import { AgmCoreModule } from '@agm/core';
 import { MapaComponent } from './mapa/mapa.component';
 
 
+
+
+
+
 @NgModule({
    imports: [
+
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBN3hl8CILMQex6Sv2xo0rxrhetOd1Zcs8'
+    }),
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBN3hl8CILMQex6Sv2xo0rxrhetOd1Zcs'
-    }),
     RouterModule.forRoot([
       { path: '', redirectTo: '/inicio', pathMatch: 'full' },
       { path: 'inicio', component:  InicioComponent},
@@ -41,6 +46,6 @@ import { MapaComponent } from './mapa/mapa.component';
   ],
   providers:[],
   declarations: [ AppComponent, HelloComponent, AppMenuComponent, PedidoComponent, MapaComponent, DestinoComponent, PagoComponent, InicioComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent , MapaComponent ]
 })
 export class AppModule { }
