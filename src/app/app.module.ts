@@ -17,6 +17,8 @@ import { MapaComponent } from './mapa/mapa.component';
 import { DestinoComponent } from './destino/destino.component';
 import { PagoComponent } from './app-menu/pago/pago.component';
 import { InicioComponent } from './app-menu/inicio/inicio.component';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
    imports: [
@@ -31,8 +33,14 @@ import { InicioComponent } from './app-menu/inicio/inicio.component';
       { path: 'mapa', component: MapaComponent },
       { path: 'pedido', component: PedidoComponent }
     ]),
+    AgmCoreModule.forRoot({
+      // please get your own API key here:
+      // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en
+      apiKey: 'AIzaSyBN3hl8CILMQex6Sv2xo0rxrhetOd1Zcs'
+    })
         
   ],
+  providers:[],
   declarations: [ AppComponent, HelloComponent, AppMenuComponent, PedidoComponent, MapaComponent, DestinoComponent, PagoComponent, InicioComponent ],
   bootstrap:    [ AppComponent ]
 })
